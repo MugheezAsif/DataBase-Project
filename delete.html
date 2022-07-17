@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solid Template</title>
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600" rel="stylesheet">
+  <link rel="stylesheet" href="stylesForCRUD.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+</head>
+<body class="is-boxed has-animations">
+  <div class="body-wrap pb-5">
+    <header class="site-header">
+      <div class="container">
+        <div class="site-header-inner">
+          <div class="brand header-brand">
+            <h1 class="m-0">
+              <a href="startusing.html">
+                <img class="header-logo-image " src="dist/images/logo.svg" alt="Logo">
+              </a>
+            </h1>
+            <h1 class ="p-auto">Deletion</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container formss">
+      <form action="connect.php" method="post">
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Select Table</label>
+          <select name="button" class="form-control" id="exampleFormControlSelect1">
+            <option value="d-hs">Hospital</option>
+            <option value="d-dp">Department</option>
+            <option value="d-em">Employee</option>
+            <option value="d-do">Doctor</option>
+            <option value="d-pi">Patient</option>
+            <option value="d-nu">Nurse</option>
+            <option value="d-lb">Laboratory</option>
+            <option value="d-rm">Room</option>
+            <option value="d-pr">Patient Report</option>
+            <option value="d-t">Test</option>
+            <option value="d-ap">Appointment</option>
+            <option value="d-md">Medication</option>
+            <option value="d-me">Medicine</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Enter ID</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" name="mainid" placeholder="Enter Id of record">
+        </div>
+        <button type="submit" class="btn btn-primary">Delete</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="dist/js/main.min.js"></script>
+</body>
+</html>

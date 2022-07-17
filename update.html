@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solid Template</title>
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600" rel="stylesheet">
+  <link rel="stylesheet" href="stylesForCRUD.css">
+  <link rel="stylesheet" href="stylesforupdate.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+</head>
+<body class="is-boxed has-animations">
+  <div class="body-wrap pb-5 h-auto">
+    <header class="site-header">
+      <div class="container">
+        <div class="site-header-inner">
+          <div class="brand header-brand">
+            <h1 class="m-0">
+              <a href="startusing.html">
+                <img class="header-logo-image " src="dist/images/logo.svg" alt="Logo">
+              </a>
+            </h1>
+            <h1 class ="p-auto text-center">Updation</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container formss">
+      <form action="connect.php" method="post">
+        <div class="form-group">
+          <label for="select">Select Table</label>
+          <select name='select_form' class='form-control' label='Select Form' id='select_table'>
+            <option>Select</option>
+            <option value="1">Hospital</option>
+            <option value="2">Department</option>
+            <option value="3">Employee</option>
+            <option value="4">Doctor</option>
+            <option value="5">Patient</option>
+            <option value="6">Nurse</option>
+            <option value="7">Laboratory</option>
+            <option value="8">Room</option>
+            <option value="9">Patient Report</option>
+            <option value="10">Test</option>
+            <option value="11">Appointment</option>
+            <option value="12">Medication</option>
+            <option value="13">Medicine</option>
+          </select>
+          <div class="form-group mt-4">
+            <label for="exampleInputEmail1">Enter ID To Update</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" name="mainid" placeholder="Enter Id">
+          </div>
+
+          <div class='container'>
+            <div class="col m-5" id="hs">
+              <h4>Hospital</h4>
+              <form action="connect.php" method="post">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Hospital ID</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter hospital Id" name="hospitalId">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Name</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Name" name="hospitalName">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Address</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Address" name="hospitaladdress">
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">Select Type</label>
+                  <select class="form-control" id="exampleFormControlSelect1" name="hospitaltype">
+                    <option value="private">Private</option>
+                    <option value="gouverment">Gouverment</option>
+                    <option value="semi gouverment">Semi Gouverment</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Email</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Email" name="hospitalemail">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Contact Number</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Phone Number" name="hospitalnumber">
+                </div>
+                  <button name="button" type="submit" value="u-hs" class="btn btn-primary">Update</button>
+              </form>
+            </div>
+            <div class="col m-5" id="de">
+                <h4>Department</h4>
+                <form action="connect.php" method="post">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Department ID</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Department Id" name="departmentid">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Hospital ID</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Hospital Id" name="hospitalId">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Department Name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Name" name="departmentName">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Manager Name</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Name" name="managerName">
+                  </div>
+                  <button name="button" type="submit" value="u-de" class="btn btn-primary">Update</button>
+                </form>
+            </div>
+            <div class="col m-5" id="em">
+              <div class="container">
+                <h4>Employee</h4>
+                <form action="connect.php" method="post">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Employee ID</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Employee Id" name="employeeid">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Department ID</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Department Id" name="departmentid">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Name" name="employeename">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Address</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Address" name="employeeaddress">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Designation</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Designation" name="designation">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Age</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Age" name="employeeage">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Phone Number</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Phone Number" name="employeephonenumber">
+                  </div>
+                  <button name="button" type="submit" value="u-em" class="btn btn-primary">Update</button>
+                </form>
+              </div>
+            </div>
+            <div class="col m-5" id="do">
+              <div class="container">
+                <h4>Doctor</h4>
+                <form action="connect.php" method="post">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Doctor ID</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Doctor Id" name="doctorid">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Employee ID</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Employee Id" name="employeeid">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">First Name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter First Name" name="doctorfirstname">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Last Name</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Last Name" name="doctorlastname">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlSelect1">Select Type</label>
+                    <select class="form-control" id="exampleFormControlSelect1" name="doctortype">
+                      <option value="specialist">Specialist</option>
+                      <option value="family">Family</option>
+                      <option value="general">General MBBS</option>
+                    </select>
+                  </div>
+                  <button name="button" type="submit" value="u-do" class="btn btn-primary">Update</button>
+                </form>
+              </div>
+            </div>
+            <div class="col m-5" id="pi">
+              <div class="container">
+                <h4>Patient</h4>
+                <form action="connect.php" method="post">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Patient ID</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Patient Id" name="patientid">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">First Name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter First Name" name="patientfirstname">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Last Name</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Last Name" name="patientlastname">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlSelect1">Select Gender</label>
+                    <select class="form-control" id="exampleFormControlSelect1" name="patientgender">
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                      <option value="other">Others</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Address</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Address" name="patientaddress">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Contact Number</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Phone Number" name="patientphonenumber">
+                  </div>
+                  <button name="button" type="submit" value="u-pi" class="btn btn-primary">Update</button>
+                </form>
+              </div>
+            </div>
+            <div class="col m-5" id="nu">
+              <div class="container">
+                <h4>Nurse</h4>
+                <form action="connect.php" method="post">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Nurse ID</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Nurse Id" name="nurseid">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Employee ID</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Employee Id" name="employeeid">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Nurse Name" name="nursename">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Room Id</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Room Id" name="roomid">
+                  </div>
+                  <button type="submit" value="u-nu" name="button" class="btn btn-primary">Update</button>
+                </form>
+              </div>
+            </div>
+            <div class="col m-5" id="lb">
+              <div class="container">
+                <h4>Laboratory</h4>
+                <form action="connect.php" method="post">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Lab ID</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Lab Id" name="labid">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Department ID</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Department Id" name="departmentid">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Patient Id</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Patient Id" name="patientid">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Test Id</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Test Id" name="testid">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Patient Contact</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Patient Contact" name="patientphonenumber">
+                  </div>
+                  <button type="submit" value="u-lb" name="button" class="btn btn-primary">Update</button>
+                </form>
+              </div>
+            </div>
+            <div class="col m-5" id="rm">
+              <div class="container">
+                <h4>Room</h4>
+                <form action="connect.php" method="post">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Room ID</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Room Id" name"roomid">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Department ID</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Department Id" name="departmentid">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Patient Id</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Patient Id" name="patientid">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Doctor Id</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Doctor Id" name="doctorid">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Nurse Id</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Nurse Id" name="nurseid">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Room Number</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Room number" name="roomnumber">
+                  </div>
+                    <label for="exampleInputPassword1">Room Status</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked name="roomstatus">
+                    <label class="form-check-label" for="exampleRadios1">
+                      Available
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" name="roomstatus">
+                    <label class="form-check-label" for="exampleRadios2">
+                      Full
+                    </label>
+                  </div>
+                  <button type="submit" value="u-rm" name="button" class="btn btn-primary">Update</button>
+                </form>
+              </div>
+            </div>
+            <div class="col m-5" id="pr">
+              <div class="container">
+                <h4>Patient Report</h4>
+                <form action="connect.php" method="post">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Report ID</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Report Id" name="reportid">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Doctor ID</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Doctor Id" name="doctorid">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Patient Id</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Patient Id" name="patientid">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Diagnose</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Diagnose" name="diagnose">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Medication</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Medication" name="medication">
+                  </div>
+                  <button type="submit" value="u-pr" name="button" class="btn btn-primary">Update</button>
+                </form>
+              </div>
+            </div>
+            <div class="col m-5" id="t">
+              <div class="container">
+                <h4>Test</h4>
+                <form action="connect.php" method="post">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Test Id</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Test Id" name="testid">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Cost</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Price of test" name="testcost">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlSelect1">Select Type</label>
+                    <select class="form-control" id="exampleFormControlSelect1" name="testtype">
+                      <option value="blood">Blood</option>
+                      <option value="suger">Suger</option>
+                      <option value="others">Others</option>
+                    </select>
+                  </div>
+                  <button type="submit" value="u-t" name="button" class="btn btn-primary">Update</button>
+                </form>
+              </div>
+            </div>
+            <div class="col m-5" id="ap">
+              <div class="container">
+                <h4>Appointment</h4>
+                <form action="connect.php" method="post">
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Appointment Id</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Appointment Id" name="appointmentid">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Time</label>
+                    <input type="Time" class="form-control" name="appointmenttime">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Date</label>
+                    <input type="date" class="form-control" name="appointmentdate">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Doctor Id</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Doctor Id" name="doctorid">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Patient Id</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Patient Id" name="patientid">
+                  </div>
+
+                  <button type="submit" value="u-ap" name="button" class="btn btn-primary">Update</button>
+                </form>
+              </div>
+            </div>
+            <div class="col m-5" id="md">
+              <div class="container">
+                <h4>Medication</h4>
+                <form action="connect.php" method="post">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Medication ID</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Medication Id" name="medicationid">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Report ID</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Patient Report Id" name="reportid">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Medicine Id</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Medicine Id" name="medicineid">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Quantity</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Quantity" name="quantity">
+                  </div>
+                  <button type="submit" value="u-md" name="button" class="btn btn-primary">Update</button>
+                </form>
+              </div>
+            </div>
+            <div class="col m-5" id="me">
+              <div class="container">
+                <h4>Medicine</h4>
+                <form action="connect.php" method="post">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Medicince Id</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Medicine Id" name="medicineid">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Medication</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Medicatioin Id" name="medicationid">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Medicine Name" name="medicinename">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Type</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Medicine Type" name="medicinetype">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Price</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Price" name="medicineprice">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Description</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Description" name="medicinedescription">
+                  </div>
+                  <button type="submit" value="u-me" name="button" class="btn btn-primary">Update</button>
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </form>
+    </div>
+
+
+  </div>
+  <script src="update.js"></script>
+  <script src="dist/js/main.min.js"></script>
+</body>
+</html>

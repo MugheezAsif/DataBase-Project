@@ -1,0 +1,29 @@
+* {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.body-wrap {
+    background-color: #242830;
+}
+.site-header {
+  padding: 20px;
+}
+.site-header h1 {
+  clear: both;
+  color: #fff;
+  font-weight: 600;
+  margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.formss {
+  color: #fff;
+}
+.formss h4 {
+  color: #3399CC;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+#hospitalBox {
+  visibility: hidden !important;
+}
